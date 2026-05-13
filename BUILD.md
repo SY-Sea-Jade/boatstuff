@@ -9,3 +9,7 @@ npm run build
 ```bash
 npm run dev
 ```
+
+# Replicate
+
+Use `.sync-files.txt` to control replication of regular laptop files to GitHub
