@@ -5,19 +5,16 @@ toc: false
 
 # Navigation Templates
 
-```js
-import SQLite from "npm:@observablehq/sqlite";
+## Tidal Planner
+
+Used to plan viable times for tight tidal gates, like the notorious Mull of Kintyre.
+
+```html
+<iframe 
+  src="${await FileAttachment("pdf/navigation_templates.pdf").url()}"
+  width="100%" 
+  height="900px"
+  style="border: none;"
+></iframe>
 ```
 
-```js
-const collection = FileAttachment("data/navigation.zip").zip();
-```
-
-```js
-const options = collection.file("Tidal_Planning.db").sqlite();
-```
-
-```js
-const products = options.sql`SELECT * FROM Tidal_Planning`;
-await products;
-```
