@@ -87,3 +87,11 @@ await storm;
 ```js
 Inputs.table(storm,{rows:24})
 ```
+
+## Original Spreadsheet
+
+Use the original spreadsheet to adapt for your own use, MacOS required.
+
+```html
+📊 <a href="${await FileAttachment("numbers/checklists.numbers").url()}" download="checklists.numbers">checklists.numbers</a>
+```

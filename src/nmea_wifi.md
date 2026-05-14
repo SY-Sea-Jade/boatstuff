@@ -30,3 +30,11 @@ const search = view(Inputs.search(products, {placeholder: "Search products ..."}
 ```js
 Inputs.table(search,{rows:20})
 ```
+
+## Original Spreadsheet
+
+Use the original spreadsheet to adapt for your own use, MacOS required.
+
+```html
+📊 <a href="${await FileAttachment("numbers/nmea_wifi_options.numbers").url()}" download="nmea_wifi_options.numbers">nmea_wifi_options.numbers</a>
+```
