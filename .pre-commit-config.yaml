@@ -7,6 +7,8 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
+  - repo: local
+    hooks:
       - id: sync-files
         name: Sync Local Files
         entry: hooks/pre-commit
