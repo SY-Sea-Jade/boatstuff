@@ -9,9 +9,15 @@ toc: false
 
 <h2>Context</h2>
 
-The data has been assembled in 2025 to upgrade a 2012 **Bavaria Cruiser 36**. 
+The data was first assembled in 2025 to upgrade a 2012 **Bavaria Cruiser 36**, and the checklists
+and navigation templates updated as needed.
 
 Since the boat is based on the West Coast of Scotland, suppliers and prices are from a UK perspective.
+
+<h2>How Its Made</h2>
+
+Presentation is made using the [Observable Framework](https://observablehq.com/framework/) from the original
+Apple Numbers spreadsheets, which are also downloadable.
 
 ---
 

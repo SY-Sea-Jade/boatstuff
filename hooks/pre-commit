@@ -52,15 +52,15 @@ sync_file() {
     local source="$1"
     local destination="$2"
     local files_changed=false
-    
+
     if [[ ! -f "$source" ]]; then
         log_warn "Source file not found: $source"
         return 1
     fi
-    
+
     # Create destination directory if it doesn't exist
     mkdir -p "$(dirname "$destination")"
-    
+
     # Copy file if it's different or doesn't exist
     if [[ ! -f "$destination" ]] || ! cmp -s "$source" "$destination"; then
         cp "$source" "$destination"
@@ -78,18 +78,18 @@ sync_directory() {
     local source="$1"
     local destination="$2"
     local files_changed=false
-    
+
     if [[ ! -d "$source" ]]; then
         log_warn "Source directory not found: $source"
         return 1
     fi
-    
+
     # Create destination directory
     mkdir -p "$(dirname "$destination")"
-    
+
     zip_output=$(zip -r --filesync "$destination" "$source"  2>&1)
     local zip_exit=$?
-    
+
     if [[ $zip_exit -eq 0 ]]; then
         log_info "Zipped: $destination"
 	git add $destination
@@ -104,19 +104,19 @@ sync_directory() {
 # Function to sync files from simple text config
 sync_from_text() {
     local files_changed=false
-    
+
     while IFS=':' read -r source destination type_and_excludes; do
         # Skip empty lines and comments
         [[ -z "$source" || "$source" =~ ^[[:space:]]*# ]] && continue
-        
+
         # Trim whitespace
         source=$(echo "$source" | xargs)
         destination=$(echo "$destination" | xargs)
-        
+
         # Parse type and exclude patterns
         local type="auto"
         local exclude_patterns=()
-        
+
         if [[ -n "$type_and_excludes" ]]; then
             # Split by comma to get type and exclude patterns
             IFS=',' read -ra parts <<< "$type_and_excludes"
@@ -129,12 +129,12 @@ sync_from_text() {
                 fi
             done
         fi
-        
+
         # Expand tilde in source path
         source=$(expand_path "$source")
-        
+
         log_info "Processing: $source -> $destination (type: $type)"
-        
+
         # Determine type automatically if not specified
         if [[ "$type" == "auto" ]]; then
             if [[ -f "$source" ]]; then
@@ -146,7 +146,7 @@ sync_from_text() {
                 continue
             fi
         fi
-        
+
         # Sync based on type
         case "$type" in
             "file")
@@ -163,9 +163,9 @@ sync_from_text() {
                 log_warn "Unknown sync type '$type' for: $source"
                 ;;
         esac
-        
+
     done < "$SIMPLE_CONFIG"
-    
+
     if $files_changed; then
         log_info "Files have been updated and staged for commit"
     else
@@ -176,7 +176,7 @@ sync_from_text() {
 # Main execution
 main() {
     log_info "Starting file sync process..."
-    
+
     if [[ -f "$SIMPLE_CONFIG" ]]; then
         sync_from_text
     else
@@ -188,11 +188,10 @@ main() {
 main
 exit 0
 EOF
-    
+
     chmod +x "$HOOKS_DIR/pre-commit"
     log_info "Created and installed pre-commit hook"
 fi
 
 log_info "Hook installation complete!"
 log_info "The pre-commit hook will now sync files before each commit based on your config file."
-

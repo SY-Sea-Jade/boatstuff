@@ -14,9 +14,9 @@ Used to plan viable times for tight tidal gates, like the notorious Mull of Kint
 ```
 
 ```html
-<iframe 
+<iframe
   src="${await FileAttachment("pdf/navigation_templates.pdf").url()}"
-  width="100%" 
+  width="100%"
   height="900px"
   style="border: none;"
 ></iframe>

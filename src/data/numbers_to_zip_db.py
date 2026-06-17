@@ -31,11 +31,11 @@ def convert(numbers_location):
                 logger.info(f"Converting sheet {sheet.name}")
                 sheet_name = sanitize_name(sheet.name)
                 db_name = f"{sheet_name}.db"
-  
+
                 conn = sqlite3.connect(":memory:")
                 cur = conn.cursor()
                 for table in sheet.tables:
-                
+
                     logger.info(f"Converting table {table.name} in sheet {sheet.name}")
                     data = list(table.rows(values_only=True))
                     if not data:
@@ -60,4 +60,3 @@ def convert(numbers_location):
                 logger.info(f"Converted {sheet.name} to {db_name} in zip")
     logger.info(f"Finished zip for : {numbers_location}")
     os.write(sys.stdout.fileno(),zip_buffer.getvalue())
-   
