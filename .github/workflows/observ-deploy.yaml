@@ -6,6 +6,9 @@ on:
   # Run this workflow when triggered manually in GitHub’s UI.
   workflow_dispatch: {}
 
+env:
+  OBSERVABLE_TELEMETRY_DISABLE: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
