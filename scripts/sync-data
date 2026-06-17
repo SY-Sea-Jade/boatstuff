@@ -92,7 +92,7 @@ sync_directory() {
 
     if [[ $zip_exit -eq 0 ]]; then
         log_info "Zipped: $destination"
-	git add $destination
+	    git add $destination
         return 0  # Changed
     else
         log_error "Failed to zip directory: $source -> $destination"

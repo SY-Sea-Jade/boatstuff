@@ -11,5 +11,6 @@ repos:
     hooks:
       - id: sync-files
         name: Sync Local Files
-        entry: hooks/pre-commit
+        entry: scripts/sync-data
         language: unsupported_script
+        always_run: true
