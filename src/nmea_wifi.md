@@ -5,7 +5,7 @@ toc: false
 
 # NMEA to Wifi Integration
 
-There's a more extensive list of vendors and projects now at the [NMEA Interfacing](https://awesome-boat-tech.rhizomatics.org.uk/#nmea-interfacing) section of the [Awesome Boat Tech](https://awesome-boat-tech.rhizomatics.org.uk) list.
+There's a more extensive list of vendors and projects now at the [NMEA Interfacing](https://boat-tech-directory.rhizomatics.org.uk/#nmea-interfacing) section of the [Boat Tech Directory](https://boat-tech-directory.rhizomatics.org.uk) list.
 
 ```js
 import SQLite from "npm:@observablehq/sqlite";
