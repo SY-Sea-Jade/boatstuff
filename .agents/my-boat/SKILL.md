@@ -66,8 +66,8 @@ description: "Reference profile for Sea Jade, my Bavaria Cruiser 36 (Farr, 2011)
 - **Galvanic isolator**: SafeSure GI-100-SM fitted in shore power earth line
 - **Earthing**: common earth below starboard aft cabin, thru-hull to a mushroom zinc anode
 - **Battery Charger**: Quick SBC NRG 230VAC – 12VDC, 45amp
-- **Distribution**
-  - AC Shore power 
+- **AC Shore Power**
+  - Distribution 
     - 16A socket at swim platform
     - Master control in transom void
     - Directly wired to Baumatic microwave at galley and calorifier under stardboard aft cabin
@@ -75,17 +75,22 @@ description: "Reference profile for Sea Jade, my Bavaria Cruiser 36 (Farr, 2011)
       - Master RCD - Sursum RCCB RP2203 with test switch, to be tested every 6 months
       - 3 Sursum B16 S1 RCDs for hot water, sockets/microwave/charger and heads socket
       - Reverse polarity detection with light
-    - UK 13A sockets
-      - Single, port side, forepeak cabin
-      - Single, starboard aft cabin
-      - Double, starboard saloon floor level
-      - Double with USB-A outlets, starboard saloon behind sofa
-      - Single, heads locker (on its own RCD)
-    - Continental 13A sockets
-      - Single, behind cooker
-      - Single, integrated into shore power control panel
-    - 4-way 13 amp strip behind cooker connected by plug to Bluetti AC outlet
-  - DC
+  - UK 13A sockets
+    - Single, port side, forepeak cabin
+    - Single, starboard aft cabin
+    - Double, starboard saloon floor level
+    - Double with USB-A outlets, starboard saloon behind sofa
+    - Single, heads locker (on its own RCD)
+  - Continental 13A sockets
+    - Single, behind cooker
+    - Single, integrated into shore power control panel
+  - 4-way 13 amp strip behind cooker connected by plug to Bluetti AC outlet
+  - Appliances
+    - Baumatic microwave, directly wired
+    - Ecoflow dehumidifier, 13A plug, occasional use
+    - Milk frother, used from Bluetti inverter
+    - C-Tek 12v battery charger, 13A plug, used occasionally
+- **DC**
     - Control panel - Bavaria Main Panel 301
       - Switches for all DC systems
       - F1-F5 additional buttons

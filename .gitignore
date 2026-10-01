@@ -1,9 +1,4 @@
 .DS_Store
 .venv/
-site/
-**/__cache__/
-dist/
 **/__pycache__/
-node_modules/
-src/.observablehq/
 private/
