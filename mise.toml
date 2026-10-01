@@ -1,0 +1,5 @@
+[tools]
+node = "latest"
+npm = "latest"
+pre-commit = "latest"
+uv = "latest"
