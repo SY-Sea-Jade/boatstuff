@@ -1,3 +1,0 @@
-numbers-parser>=4.15.1
-python-snappy
-loguru
